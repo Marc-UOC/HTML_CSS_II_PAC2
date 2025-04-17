@@ -1,0 +1,54 @@
+{
+    "extends": [
+      "stylelint-config-standard-scss"
+    ],
+    "plugins": [
+      "stylelint-order"
+    ],
+    "rules": {
+      "selector-class-pattern": "^[a-z]([a-z0-9-]+)?(__([a-z0-9]+-?)+)?(--([a-z0-9]+-?)+){0,2}$",
+      "selector-max-id": 0,
+      "selector-max-universal": 0,
+      "color-named": "never",
+      "declaration-no-important": true,
+      "max-nesting-depth": 3,
+      "order/order": [
+        "custom-properties",
+        "dollar-variables",
+        "at-variables",
+        "declarations",
+        {
+          "type": "at-rule",
+          "name": "media"
+        },
+        "rules"
+      ],
+      "order/properties-order": [
+        "display",
+        "position",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "z-index",
+        "flex",
+        "flex-grow",
+        "flex-shrink",
+        "flex-basis",
+        "justify-content",
+        "align-items",
+        "width",
+        "height",
+        "margin",
+        "padding",
+        "font-size",
+        "font-weight",
+        "line-height",
+        "text-align",
+        "color",
+        "background",
+        "border"
+      ]
+    }
+  }
+  

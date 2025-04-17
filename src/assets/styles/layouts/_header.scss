@@ -1,0 +1,42 @@
+.site-header {
+    padding: 2rem;
+    background: #e6f2ff;
+  
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    &__logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+  
+      &-icon {
+        font-size: 1.5rem;
+      }
+  
+      &-text {
+        font-size: 1.25rem;
+        font-weight: bold;
+      }
+    }
+  
+    &__nav {
+      .site-header__nav-list {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        gap: 1.5rem;
+        list-style: none;
+  
+        a {
+          text-decoration: none;
+          font-weight: bold;
+          color: #1a4b7c;
+        }
+      }
+    }
+  }
+  
