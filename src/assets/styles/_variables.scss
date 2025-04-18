@@ -1,22 +1,28 @@
 @use "sass:color";
+@use "sass:map";
 
+$theme-colors: (
+  "primary": #6482AD,
+  "secondary": #7FA1C3,
+  "tertiary": #65b4cc,
+  "text-primary": #212121,
+  "text-secondary": #616161,
+  "background": #E2DAD6,
+);
 $font-family-base: -apple-system, blinkmacsystemfont, "Segoe UI", roboto,
   "Helvetica Neue", arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
   "Segoe UI Symbol";
-$font-size-base: 16px;
-$font-size-lg: 20px;
-
-$color-primary: #6482AD;
-$color-secondary: #7FA1C3;
-$color-tertiary: #65b4cc;
+$font-size-base: 1rem;
+$font-size-lg: 1.25rem;
+$border-radius: 0;
+$container-max-width: 1600px;
+$color-primary: map.get($theme-colors, "primary");
+$color-secondary: map.get($theme-colors, "secondary");
+$color-tertiary: map.get($theme-colors, "tertiary");
 $color-background: #E2DAD6;
-
 $color-icon: $color-tertiary;
 $color-text-primary: #212121;
 $color-text-secondary: #616161;
-
-$mq-min-tablet: 600px;
-$mq-min-desktop: 960px;
-
-$container-max-width: 1600px;
+$mq-min-tablet: 768px;
+$mq-min-desktop: 992px;
 $container-padding: 1.5rem;

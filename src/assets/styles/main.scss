@@ -14,9 +14,8 @@
  * see: https://v2.parceljs.org/features/module-resolution/
  * see commented examples below
  */
-
-// @import "some-node-module";
-// @import "@some-company/some-node-module";
+ 
+ @import "bootstrap/scss/bootstrap";
 
 /**
  * Import layouts
@@ -24,9 +23,10 @@
  */
 
 @import "layouts/base";
-@import "layouts/home";
 @import "layouts/header";
 @import "layouts/footer";
+@import "layouts/home";
+@import "layouts/speakers";
 
 /**
  * Do NOT include anything else in this file!

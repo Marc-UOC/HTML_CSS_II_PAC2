@@ -1,0 +1,68 @@
+.speakers {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  
+    &__title {
+      font-size: 2rem;
+      font-weight: 400;
+      text-align: center;
+    }
+  
+    &__grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+  
+    &__note {
+      font-size: 0.9rem;
+      text-align: center;
+      color: $color-text-secondary;
+      margin-top: 3rem;
+    }
+  }
+  
+  .speaker {
+    flex: 1 1 calc(100% - 2rem);
+    max-width: 520px;
+    border: none;
+    overflow: hidden;
+  
+    @media (min-width: $mq-min-tablet) {
+      flex: 1 1 calc(50% - 2rem);
+    }
+  
+    @media (min-width: $mq-min-desktop) {
+      flex: 1 1 calc(33.333% - 2rem);
+    }
+  
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: $color-background;
+      padding: 1rem;
+    }
+  
+    &__photo {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  
+    &__name {
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-align: center;
+      color: $color-primary;
+      margin-bottom: 0.5rem;
+    }
+  
+    &__description {
+      font-size: 0.95rem;
+      text-align: center;
+      color: $color-text-primary;
+    }
+  }
+  
