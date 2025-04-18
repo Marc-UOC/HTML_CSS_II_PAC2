@@ -2,43 +2,6 @@
   background-color: $color-background;
   border-bottom: 2px solid $color-secondary;
 
-  &__logo-img {
-    width: auto;
-    height: 48px;
-  }
-
-  &__title {
-    font-size: 1.25rem;
-    font-weight: 700;
-    font-family: $font-family-base;
-    letter-spacing: 0.5px;
-    color: $color-text-primary;
-    text-align: center;
-
-    @media (min-width: $mq-min-tablet) {
-      text-align: left;
-    }
-  }
-
-  &__nav-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-
-    .nav-link {
-      font-size: $font-size-base;
-      font-family: $font-family-base;
-      color: $color-text-primary;
-      text-decoration: none;
-      transition: color 0.3s ease;
-      font-weight: 500;
-
-      &:hover {
-        color: $color-secondary;
-      }
-    }
-  }
-
   @media (max-width: $mq-min-tablet) {
     &__nav-list {
       width: 100%;
@@ -52,6 +15,43 @@
     .nav-link {
       display: block;
       padding: 0.5rem 0;
+    }
+  }
+
+  &__logo-img {
+    width: auto;
+    height: 48px;
+  }
+
+  &__title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-align: center;
+    color: $color-text-primary;
+    font-family: $font-family-base;
+    letter-spacing: 0.5px;
+
+    @media (min-width: $mq-min-tablet) {
+      text-align: left;
+    }
+  }
+
+  &__nav-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    .nav-link {
+      font-size: $font-size-base;
+      font-weight: 500;
+      color: $color-text-primary;
+      font-family: $font-family-base;
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $color-secondary;
+      }
     }
   }
 }

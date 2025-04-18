@@ -1,0 +1,117 @@
+@use "sass:color";
+
+@layer components {
+  .article {
+    container-type: inline-size;
+    container-name: article;
+
+    &__header {
+      background-color: color.adjust($color-background, $lightness: 10%);
+      border-radius: 0.5rem;
+    }
+
+    &__header-img {
+      width: 64px;
+      height: auto;
+    }
+
+    &__title {
+      font-size: 1.75rem;
+      font-weight: 600;
+      color: $color-primary;
+      font-family: $font-family-base;
+    }
+
+    &__author {
+      font-size: 0.95rem;
+      color: $color-text-secondary;
+    }
+
+    &__intro {
+      flex-direction: column;
+
+      @container article (min-width: 700px) {
+        flex-direction: row;
+      }
+
+      p {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: $color-text-primary;
+      }
+    }
+
+    &__lead {
+      color: $color-primary;
+    }
+
+    &__context {
+      color: $color-text-secondary;
+    }
+
+    &__content p {
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 1.25rem;
+    }
+
+    &__content blockquote {
+      margin: 2rem 0;
+      color: $color-secondary;
+      font-style: italic;
+      border-left: 4px solid $color-secondary;
+      padding-left: 1rem;
+    }
+
+    &__image {
+      width: 100%;
+      border-radius: 0.5rem;
+    }
+
+    &__list {
+      list-style: none;
+      padding: 0;
+      margin-top: 2rem;
+      border-top: 1px solid $color-secondary;
+      padding-top: 1rem;
+    }
+
+    &__list li {
+      margin-bottom: 1rem;
+      padding-left: 2rem;
+      position: relative;
+      color: $color-text-primary;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-weight: bold;
+        color: $color-primary;
+      }
+
+      &:nth-child(1)::before {
+        content: "1";
+      }
+
+      &:nth-child(2)::before {
+        content: "2";
+      }
+
+      &:nth-child(3)::before {
+        content: "3";
+      }
+    }
+
+    // Exemple de :has() — estil si té imatge dins
+    &:has(.article__image) {
+      border-top: 2px solid $color-tertiary;
+      padding-top: 1.5rem;
+    }
+
+    // Ús de :is()
+    :is(h1, h2, h3) {
+      font-family: $font-family-base;
+    }
+  }
+}
