@@ -2,18 +2,19 @@
 <html lang="ca">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="./assets/styles/main.scss" />
-    <title>Jornades d’Economia Circular</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="./assets/styles/main.scss"/><!-- do not remove this line! -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet" /> -->
+    <title>CirEco Fest</title>
   </head>
 
-  <body class="home-page">
+  <body class="home-page container">
     <include src="./views/header.html"></include>
 
     <main class="poster">
       <div class="poster__image" aria-hidden="true"></div>
 
-      <h1 class="poster__title">Jornades d’Economia Circular</h1>
+      <h1 class="poster__title">Xerades d’Economia Circular</h1>
 
       <p class="poster__subtitle">
         Un esdeveniment per repensar el futur del planeta. Participa en xerrades,
@@ -21,13 +22,23 @@
       </p>
 
       <div class="poster__details">
-        <p><strong>Dates:</strong> 3-5 de maig de 2025</p>
-        <p><strong>Lloc:</strong> Centre Cívic del barri · Sala d’Actes</p>
+        <p>
+          <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+          <strong>Dates:</strong> 3-5 de maig de 2025
+        </p>
+        <p>
+          <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+          <strong>Lloc:</strong> Centre Cívic del barri · Sala d’Actes
+        </p>
       </div>
     </main>
 
     <include src="./views/footer.html"></include>
-
-    <script type="module" src="./assets/scripts/main.js"></script>
+    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
   </body>
 </html>
+
+<!-- <picture>
+  <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
+  <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
+</picture> -->

@@ -1,41 +1,54 @@
 .site-header {
-    padding: 2rem;
-    background: #e6f2ff;
+    background-color: $color-background;
+    border-bottom: 2px solid $color-secondary;
+    padding: 1.5rem 0;
   
     &__container {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
+    }
+  
+    &__branding {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
     }
   
     &__logo {
       display: flex;
       align-items: center;
-      gap: 0.5rem;
-  
-      &-icon {
-        font-size: 1.5rem;
-      }
-  
-      &-text {
-        font-size: 1.25rem;
-        font-weight: bold;
-      }
+      font-size: 1.5rem;
+      color: $color-secondary;
     }
   
-    &__nav {
-      .site-header__nav-list {
-        display: flex;
-        margin: 0;
-        padding: 0;
-        gap: 1.5rem;
-        list-style: none;
+    &__title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      font-family: $font-family-base;
+      color: $color-text-primary;
+      letter-spacing: 0.5px;
+    }
   
-        a {
-          text-decoration: none;
-          font-weight: bold;
-          color: #1a4b7c;
-        }
+    &__nav-list {
+      display: flex;
+      gap: 2rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+  
+    &__nav-link {
+      font-size: $font-size-base;
+      font-weight: 500;
+      text-decoration: none;
+      color: $color-text-primary;
+      font-family: $font-family-base;
+      transition: color 0.3s ease;
+  
+      &:hover {
+        color: $color-secondary;
       }
     }
   }
