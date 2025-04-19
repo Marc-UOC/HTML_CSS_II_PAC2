@@ -1,20 +1,23 @@
 <header class="site-header py-3">
-  <div class="container">
-    <div class="d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+  <div class="container d-flex justify-content-between align-items-center">
+    <a href="./index.html" class="d-flex align-items-center gap-2 text-decoration-none">
+      <img src="./assets/images/logo.png" alt="EcoCircular Fest" class="site-header__logo-img" />
+      <span class="site-header__title">EcoCircular Fest</span>
+    </a>
 
-      <a href="./index.html" class="d-flex align-items-center gap-2 text-decoration-none">
-        <img src="./assets/images/logo.png" alt="EcoCircular Fest" class="site-header__logo-img" />
-        <span class="site-header__title">EcoCircular Fest</span>
-      </a>
+    <!-- Toggle CSS amb checkbox -->
+    <input type="checkbox" id="menu-toggle" class="site-header__checkbox" hidden />
+    <label for="menu-toggle" class="site-header__toggle d-md-none" aria-label="Obrir menú">
+      <i class="fas fa-bars"></i>
+    </label>
 
-      <nav class="site-header__nav" aria-label="Navegació principal">
-        <ul class="site-header__nav-list d-flex flex-column flex-md-row align-items-center gap-md-4 m-0 p-0">
-          <li class="nav-item"><a href="./speakers.html" class="nav-link">Ponents</a></li>
-          <li class="nav-item"><a href="./article.html" class="nav-link">Article</a></li>
-          <li class="nav-item"><a href="./contact.html" class="nav-link">Contacte</a></li>
-        </ul>
-      </nav>
-
-    </div>
+    <!-- Menú -->
+    <nav class="site-header__nav">
+      <ul class="site-header__nav-list d-md-flex align-items-center gap-md-4 m-0 p-0">
+        <li class="nav-item"><a href="./speakers.html" class="nav-link">Ponents</a></li>
+        <li class="nav-item"><a href="./article.html" class="nav-link">Article</a></li>
+        <li class="nav-item"><a href="./contact.html" class="nav-link">Contacte</a></li>
+      </ul>
+    </nav>
   </div>
 </header>
