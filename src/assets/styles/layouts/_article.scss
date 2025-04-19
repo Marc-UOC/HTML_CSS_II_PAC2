@@ -80,33 +80,33 @@
         list-style: none;
         border-top: 1px solid $color-secondary;
         border-bottom: 1px solid $color-secondary;
+      }
+    }
 
-        li {
-          margin-bottom: 1rem;
-          padding-left: 2rem;
-          position: relative;
-          color: $color-text-primary;
-
-          &::before {
-            position: absolute;
-            top: 0;
-            left: 0;
-            font-weight: bold;
-            color: $color-primary;
-            content: attr(data-index);
-          }
-        }
+    .article__list li {
+      margin-bottom: 1rem;
+      padding-left: 2rem;
+      position: relative;
+      color: $color-text-primary;
+    
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-weight: bold;
+        color: $color-primary;
+        content: attr(data-index);
       }
     }
 
     &__quote {
       blockquote {
+        position: relative;
         margin: 3rem 0;
         padding: 1rem;
-        position: relative;
         font-size: 1rem;
-        font-style: italic;
         color: $color-secondary;
+        font-style: italic;
         background-color: $color-background;
         border-left: 3px solid $color-secondary;
         border-radius: 0.2rem;
