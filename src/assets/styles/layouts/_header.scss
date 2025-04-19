@@ -1,10 +1,6 @@
 .site-header {
   background-color: $color-background;
   border-bottom: 2px solid $color-secondary;
-  
-  .page-article & {
-    border-bottom: none;
-  }
 
   @media (max-width: $mq-min-tablet) {
     &__nav-list {
@@ -20,6 +16,10 @@
       display: block;
       padding: 0.5rem 0;
     }
+  }
+  
+  .page-article & {
+    border-bottom: none;
   }
 
   &__logo-img {

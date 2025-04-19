@@ -1,0 +1,70 @@
+@use "sass:color";
+
+@layer components {
+  .contact {
+    container-type: inline-size;
+    container-name: contact;
+
+    &__title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: $color-primary;
+    }
+
+    &__subtitle {
+      font-size: 1.1rem;
+      color: $color-text-secondary;
+    }
+
+    &__context-text {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: $color-text-secondary;
+      max-width: 700px;
+      margin-inline: auto;
+    }
+
+    &__form {
+      flex: 1;
+      max-width: 540px;
+      margin-inline: auto;
+      padding: 2rem;
+      background-color: $color-background;
+      border: 1px solid $color-secondary;
+      border-radius: 0.75rem;
+      container-type: inline-size;
+
+      .form-label {
+        font-weight: 600;
+        color: $color-text-primary;
+      }
+
+      .form-control {
+        border-radius: 0.375rem;
+        background-color: $color-background;
+      }
+
+      .btn {
+        margin-top: 1rem;
+        width: 100%;
+
+        @container (min-width: 600px) {
+          width: auto;
+        }
+      }
+
+      @container (min-width: 600px) {
+        .form-control {
+          font-size: 1.05rem;
+        }
+      }
+    }
+
+    &__form-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: $color-primary;
+      margin-bottom: 1rem;
+    }
+  }
+}

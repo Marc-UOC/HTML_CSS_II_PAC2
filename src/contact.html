@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CirEco Fest - Contacte</title>
+    <link rel="stylesheet" href="./assets/styles/main.scss" />
+  </head>
+  <body class="page-contact">
+    <include src="./views/header.html"></include>
+
+    <main class="contact container py-5">
+      <div class="text-center mb-5">
+        <h1 class="contact__title">Contacta amb l'organització</h1>
+
+        <section class="contact__context-text text-center mb-5">
+          <p>
+            Si tens dubtes generals o vols col·laborar amb el festival, pots escriure'ns a través del formulari general.
+            Si estàs interessat/da a formar part del programa com a ponent, selecciona l'opció corresponent i omple el formulari amb la teva proposta.
+          </p>
+        </section>
+
+        <p class="contact__subtitle">Selecciona el tipus de contacte:</p>
+
+        <div class="btn-group mt-3" role="group">
+          <button type="button" class="btn btn-outline-primary active" data-form="general">General</button>
+          <button type="button" class="btn btn-outline-primary" data-form="ponent">Vull ser ponent</button>
+        </div>
+      </div>
+
+      <!-- Formulari General -->
+      <form name="contacte-general" method="POST" data-netlify="true" class="contact__form card shadow-sm p-4 form-general">
+        <input type="hidden" name="form-name" value="contacte-general" />
+        <div class="row g-3">
+          <div class="col-12 col-md-6">
+            <label for="nom" class="form-label">Nom complet</label>
+            <input type="text" class="form-control" id="nom" name="nom" required />
+          </div>
+          <div class="col-12 col-md-6">
+            <label for="email" class="form-label">Correu electrònic</label>
+            <input type="email" class="form-control" id="email" name="email" required />
+          </div>
+          <div class="col-12">
+            <label for="missatge" class="form-label">Missatge</label>
+            <textarea class="form-control" id="missatge" name="missatge" rows="5" required></textarea>
+          </div>
+        </div>
+        <div class="text-center mt-4">
+          <button type="submit" class="btn btn-primary px-4">Envia</button>
+        </div>
+      </form>
+
+      <!-- Formulari Ponent -->
+      <form name="contacte-ponent" method="POST" data-netlify="true" class="contact__form card shadow-sm p-4 form-ponent d-none">
+        <input type="hidden" name="form-name" value="contacte-ponent" />
+        <div class="row g-3">
+          <div class="col-12 col-md-6">
+            <label for="nom-ponent" class="form-label">Nom complet</label>
+            <input type="text" class="form-control" id="nom-ponent" name="nom" required />
+          </div>
+          <div class="col-12 col-md-6">
+            <label for="email-ponent" class="form-label">Correu electrònic</label>
+            <input type="email" class="form-control" id="email-ponent" name="email" required />
+          </div>
+          <div class="col-12 col-md-6">
+            <label for="tematica" class="form-label">Temàtica proposta</label>
+            <input type="text" class="form-control" id="tematica" name="tematica" required />
+          </div>
+          <div class="col-12 col-md-6">
+            <label for="perfil" class="form-label">Descripció del teu perfil</label>
+            <textarea class="form-control" id="perfil" name="perfil" rows="4" required></textarea>
+          </div>
+          <div class="col-12">
+            <label for="missatge-ponent" class="form-label">Missatge addicional</label>
+            <textarea class="form-control" id="missatge-ponent" name="missatge" rows="4"></textarea>
+          </div>
+        </div>
+        <div class="text-center mt-4">
+          <button type="submit" class="btn btn-primary px-4">Envia proposta</button>
+        </div>
+      </form>
+    </main>
+
+    <include src="./views/footer.html"></include>
+    <script type="module" src="./assets/scripts/main.js"></script>
+    <script>
+      document.querySelectorAll('[data-form]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('[data-form]').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          document.querySelector('.form-general').classList.toggle('d-none', btn.dataset.form !== 'general');
+          document.querySelector('.form-ponent').classList.toggle('d-none', btn.dataset.form !== 'ponent');
+        });
+      });
+    </script>
+  </body>
+</html>
