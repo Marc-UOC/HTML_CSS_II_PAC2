@@ -5,111 +5,145 @@
     container-type: inline-size;
     container-name: article;
 
-    &__header {
-      background-color: color.adjust($color-background, $lightness: 10%);
-      border-radius: 0.5rem;
-    }
+    &__hero {
+      position: relative;
 
-    &__header-img {
-      width: 64px;
-      height: auto;
-    }
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-height: 800px;
+        object-fit: cover;
+        border-radius: 0;
+      }
 
-    &__title {
-      font-size: 1.75rem;
-      font-weight: 600;
-      color: $color-primary;
-      font-family: $font-family-base;
-    }
+      &-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 1rem 2rem;
+        text-shadow: 0 1px 3px rgb(0 0 0 / 60%);
+        max-width: 90%;
+      }
 
-    &__author {
-      font-size: 0.95rem;
-      color: $color-text-secondary;
+      &-title {
+        font-size: 2rem;
+        font-weight: bold;
+        color: $color-secondary;
+        margin-bottom: 0.5rem;
+
+        @media (min-width: $mq-min-tablet) {
+          font-size: 2.5rem;
+        }
+      }
+
+      &-author {
+        font-size: 1rem;
+        font-style: italic;
+        color: $color-background;
+
+        @media (min-width: $mq-min-tablet) {
+          font-size: 1.25rem;
+        }
+      }
     }
 
     &__intro {
+      container-type: inline-size;
+      container-name: intro;
       flex-direction: column;
 
-      @container article (min-width: 700px) {
+      @container intro (min-width: 700px) {
         flex-direction: row;
+      }
+
+      :is(.article__lead p) {
+        font-size: 1.25rem;
+        font-weight: 600;
+        line-height: 1.7;
+        color: $color-text-primary;
+      }
+
+      :is(.article__context p) {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.6;
+        color: $color-text-secondary;
+      }
+    }
+
+    &__content {
+      .article__list {
+        margin: 2.5rem 0;
+        padding: 1.5rem 0;
+        list-style: none;
+        border-top: 1px solid $color-secondary;
+        border-bottom: 1px solid $color-secondary;
+
+        li {
+          margin-bottom: 1rem;
+          padding-left: 2rem;
+          position: relative;
+          color: $color-text-primary;
+
+          &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-weight: bold;
+            color: $color-primary;
+            content: attr(data-index);
+          }
+        }
+      }
+    }
+
+    &__quote {
+      blockquote {
+        margin: 3rem 0;
+        padding: 1rem;
+        position: relative;
+        font-size: 1rem;
+        font-style: italic;
+        color: $color-secondary;
+        background-color: $color-background;
+        border-left: 3px solid $color-secondary;
+        border-radius: 0.2rem;
+      }
+    }
+
+    &__image {
+      display: block;
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 0.5rem;
+    }
+
+    &__closing {
+      h2 {
+        font-size: 1.5rem;
+        color: $color-primary;
       }
 
       p {
         font-size: 1rem;
-        line-height: 1.6;
         color: $color-text-primary;
       }
     }
 
-    &__lead {
-      color: $color-primary;
+    .container--narrow {
+      max-width: 920px;
+      margin-inline: auto;
+      padding-left: $container-padding;
+      padding-right: $container-padding;
     }
 
-    &__context {
-      color: $color-text-secondary;
-    }
-
-    &__content p {
-      font-size: 1rem;
-      line-height: 1.7;
-      margin-bottom: 1.25rem;
-    }
-
-    &__content blockquote {
-      margin: 2rem 0;
-      color: $color-secondary;
-      font-style: italic;
-      border-left: 4px solid $color-secondary;
-      padding-left: 1rem;
-    }
-
-    &__image {
-      width: 100%;
-      border-radius: 0.5rem;
-    }
-
-    &__list {
-      list-style: none;
-      padding: 0;
-      margin-top: 2rem;
-      border-top: 1px solid $color-secondary;
-      padding-top: 1rem;
-    }
-
-    &__list li {
-      margin-bottom: 1rem;
-      padding-left: 2rem;
-      position: relative;
-      color: $color-text-primary;
-
-      &::before {
-        position: absolute;
-        top: 0;
-        left: 0;
-        font-weight: bold;
-        color: $color-primary;
-      }
-
-      &:nth-child(1)::before {
-        content: "1";
-      }
-
-      &:nth-child(2)::before {
-        content: "2";
-      }
-
-      &:nth-child(3)::before {
-        content: "3";
-      }
-    }
-
-    // Exemple de :has() — estil si té imatge dins
     &:has(.article__image) {
       border-top: 2px solid $color-tertiary;
-      padding-top: 1.5rem;
     }
 
-    // Ús de :is()
     :is(h1, h2, h3) {
       font-family: $font-family-base;
     }

@@ -10,56 +10,106 @@
   <body>
     <include src="./views/header.html"></include>
 
-    <main class="article container my-5 container-query">
-        <div class="article__header text-center py-5">
-          <!-- <img src="./assets/images/article-header.svg" alt="Imatge principal" class="article__header-img mb-4" /> -->
-          <h1 class="article__title">Un festival per a repensar el futur sostenible</h1>
-          <p class="article__author">per <strong>l’Equip de CirEco Fest</strong></p>
-        </div>
-      
-        <section class="article__intro d-md-flex gap-4 mb-5">
-          <p class="article__lead flex-fill fw-semibold">
-            Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-            there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.
-          </p>
-          <p class="article__context flex-fill">
-            It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
-            Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life.
-          </p>
+    <main class="article">
+        <section class="article__hero">
+            <picture>
+              <source srcset="./assets/images/main-article-photo.png?as=webp&width=1600" type="image/webp" />
+              <img src="./assets/images/main-article-photo.png?width=1600" alt="Marc Vidal en una conferència anterior" class="img-fluid w-100" />
+            </picture>
+          
+            <div class="article__hero-overlay text-center text-light">
+              <h1 class="article__hero-title">Digitalització i transformació productiva circular</h1>
+              <br>
+              <p class="article__hero-author">per Marc Vidal</p>
+            </div>
         </section>
-      
-        <section class="article__content">
-          <p>
-            The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks
-            and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia,
-            put her initial into the belt and made herself on the way.
-          </p>
-      
-          <blockquote cite="https://example.org">
-            “Aquest festival no només tracta de reciclatge: tracta de com viure millor amb menys.”
-          </blockquote>
-      
-          <!-- <img src="./assets/images/article-img-1.jpg" alt="Assistents al festival" class="article__image my-4" /> -->
-      
-          <p>
-            On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have
-            been rewritten a thousand times and everything that was left from its origin would be the word "and".
-          </p>
-      
-          <p>
-            When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her
-            hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road.
-          </p>
-      
-          <ul class="article__list">
-            <li><strong>1.</strong> Activitats gratuïtes per a tota la família</li>
-            <li><strong>2.</strong> Tallers sobre economia circular i reciclatge</li>
-            <li><strong>3.</strong> Xerrades d’experts en sostenibilitat</li>
-          </ul>
-      
-          <!-- <img src="./assets/images/article-img-2.jpg" alt="Conferència al festival" class="article__image my-4" /> -->
+
+        <section class="container--narrow article__intro d-flex flex-column flex-md-row gap-4 py-5">
+            <div class="article__lead fw-semibold">
+              <p>
+                La xerrada inaugural del <strong>CirEco Fest 2025</strong> anirà a càrrec de l'economista
+                <abbr title="Marc Vidal">M. Vidal</abbr> i se centrarà en el paper de la <em>digitalització</em> dins de
+                l’<strong>economia circular</strong>.
+              </p>
+            </div>
+            <div class="article__context">
+              <p>
+                Sota el títol <em>“Digitalització i transformació productiva circular”</em>, Vidal oferirà una visió estratègica
+                sobre com les <strong>tecnologies emergents</strong> poden catalitzar el canvi cap a models més eficients,
+                regeneratius i connectats.
+              </p>
+            </div>
         </section>
-      </main>
+
+        <section class="container--narrow py-2 article__content">
+            <ul class="article__list">
+              <li data-index="1">
+                <strong>Redissenyar processos amb dades</strong><br />
+                Vidal parlarà sobre com l’anàlisi de dades i la <b><abbr title="Intel·ligència Artificial">IA</abbr></b> poden ajudar a
+                optimitzar l’ús de recursos, reduint el malbaratament des de l’origen.
+              </li>
+              <li data-index="2">
+                <strong>Economia circular i indústria 4.0</strong><br />
+                S'exposarà com la interconnexió de sistemes facilita el manteniment predictiu, la logística inversa i el control
+                del cicle de vida dels productes.
+              </li>
+              <li data-index="3">
+                <strong>Nous models de negoci</strong><br />
+                La ponència abordarà també l’evolució del consum cap a sistemes basats en serveis, amb exemples de
+                <em>producte-com-a-servei</em> i plataformes de reutilització.
+              </li>
+            </ul>
+        </section>
+
+        <section class="container--narrow py-4 article__closing">
+            <h2>Com la digitalització pot transformar l'economia circular</h2>
+            <p>
+                La ponència explorarà com les tecnologies digitals poden reconfigurar profundament els models productius cap a un enfocament més circular, on cada dada, procés i interacció aporta valor sostenible.
+            </p>
+            <p>
+                Es detallaran aplicacions reals de la <strong>intel·ligència artificial</strong> i la <strong>internet de les coses</strong> per a predir manteniment, dissenyar amb criteris de reutilització i automatitzar fluxos de materials dins la cadena de valor.
+            </p>
+            <p>
+                Finalment, s’abordarà com la integració de solucions digitals pot afavorir una millor presa de decisions en temps real i contribuir a crear sistemes industrials més transparents, col·laboratius i resilients.
+            </p>
+        </section>
+
+        <section class="container--narrow py-4 article__quote">
+            <blockquote>
+              “Digitalitzar no és afegir tecnologia, és <em>repensar com creem i reciclem valor</em> dins de l’economia.”
+            </blockquote>
+        </section>
+
+      <section class="container py-4">
+        <figure class="text-center">
+          <picture>
+            <source srcset="./assets/images/speaker-6.jpg?as=webp&width=1200" type="image/webp" />
+            <img
+              src="./assets/images/speaker-6.jpg?width=1200"
+              alt="Visualització de simbiosi digital en entorns circulars"
+              class="article__image img-fluid mx-auto d-block"
+            />
+          </picture>
+          <figcaption class="mt-2 text-muted small">Imatge d'una xerrada</figcaption>
+        </figure>
+      </section>
+
+      <section class="container--narrow py-4 article__closing">
+        <h2>Detalls de la sessió inaugural</h2>
+        <p>
+          La conferència de Marc Vidal tindrà lloc el <time datetime="2025-05-03T18:00">divendres 3 de maig a les 18:00h</time> al
+          <strong>Centre Cívic del barri</strong>, i marcarà l’inici oficial del <strong>CirEco Fest 2025</strong>.
+        </p>
+        <p>
+          S’espera una elevada assistència, amb més de <strong>45 persones preinscrites</strong>, incloent professionals del
+          sector industrial, responsables municipals i estudiants interessats en la innovació circular.
+        </p>
+        <p>
+          Aquesta ponència promet ser un punt de partida <em>inspirador</em> per reflexionar sobre el futur de la producció i el
+          consum en un món cada cop més digitalitzat.
+        </p>
+      </section>
+    </main>
 
     <include src="./views/footer.html"></include>
     <script type="module" src="./assets/scripts/main.js"></script>

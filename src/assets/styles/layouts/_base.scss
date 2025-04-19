@@ -9,12 +9,6 @@ body {
   background-color: map.get($theme-colors, "background");
 }
 
-h1, h2, h3, h4, h5, h6 {
-  margin: 0 0 1rem;
-  font-weight: 700;
-  color: map.get($theme-colors, "text-primary");
-}
-
 p {
   margin: 0 0 1rem;
 }
