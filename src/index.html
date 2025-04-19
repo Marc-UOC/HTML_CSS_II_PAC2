@@ -2,37 +2,31 @@
 <html lang="ca">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="stylesheet" href="./assets/styles/main.scss"/><!-- do not remove this line! -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./assets/styles/main.scss" />
     <title>CirEco Fest</title>
   </head>
 
-  <body class="home-page">
-    <include src="./views/header.html"></include>
+  <body class="poster-page">
+    <main class="poster">
+      <include src="./views/header.html"></include>
 
-    <main class="poster container text-center py-5">
-      <div class="poster__image mb-4" aria-hidden="true"></div>
-    
-      <h1 class="poster__title">Xerrades d’Economia Circular</h1>
-    
-      <p class="poster__subtitle">
-        Un esdeveniment per repensar el futur del planeta. Participa en xerrades,
-        tallers i activitats obertes a tothom.
-      </p>
-    
-      <div class="poster__details mt-3">
-        <p>
-          <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-          <strong>Dates:</strong> 3-5 de maig de 2025
-        </p>
-        <p>
-          <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-          <strong>Lloc:</strong> Centre Cívic del barri · Sala d’Actes
-        </p>
+      <div class="poster__hero">
+        <div class="poster__content">
+          <h1><span class="highlight">CirEco Fest</span> 2025</h1>
+          <p class="poster__subtitle">
+            Un festival per repensar l’economia circular, la innovació i la sostenibilitat.<br />
+            <br>
+            Vine a inspirar-te amb xerrades, tallers i activitats!
+          </p>
+          <br>
+          <p class="poster__info"><span class="highlight">3-5 de maig · Centre Cívic del Barri · Barcelona</span></p>
+        </div>
       </div>
+
+      <include src="./views/footer.html"></include>
     </main>
 
-    <include src="./views/footer.html"></include>
-    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+    <script type="module" src="./assets/scripts/main.js"></script>
   </body>
 </html>

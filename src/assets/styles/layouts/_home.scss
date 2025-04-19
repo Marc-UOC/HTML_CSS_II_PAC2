@@ -1,49 +1,86 @@
-@use "sass:map";
+@use "sass:color";
 
-.poster {
-  display: grid;
-  padding: 4rem 2rem;
-  text-align: center;
-  place-items: center center;
-  grid-template-rows: auto 1fr auto;
-  background-color: map.get($theme-colors, "background");
-  min-height: 100vh;
-
-  @supports not (display: grid) {
-    display: block;
-  }
-
-  &__image {
-    width: 300px;
-    height: 200px;
+.poster-page {
+  .site-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
     background: transparent;
-    border: 4px solid map.get($theme-colors, "secondary");
-    margin-bottom: 2rem;
+    border: none;
+
+    .site-header__title,
+    .nav-link {
+      color: $color-background;
+      text-shadow: 0 1px 3px rgb(0 0 0 / 60%);
+    }
   }
 
-  &__title {
-    font-size: 2.5rem;
-    color: map.get($theme-colors, "primary");
-    margin-bottom: 1rem;
-  }
+  .poster {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    background-color: $color-background;
 
-  &__subtitle {
-    font-size: 1.25rem;
-    max-width: 600px;
-    margin-bottom: 2rem;
-    line-height: 1.6;
-    color: map.get($theme-colors, "text-primary");
-  }
+    .highlight {
+      color: $color-secondary;
+    }
 
-  &__details {
-    font-size: 1rem;
-    line-height: 1.5;
-    color: map.get($theme-colors, "text-secondary");
+    @supports not (display: grid) {
+      display: block;
+    }
 
-    i {
-      font-size: 1rem;
-      color: map.get($theme-colors, "primary");
-      margin-right: 0.5rem;
+    &__hero {
+      display: grid;
+      position: relative;
+      height: 75vh;
+      padding: 2rem;
+      text-align: center;
+      background: url("../images/main-page.png") no-repeat center center;
+      background-size: cover;
+      place-items: center;
+      isolation: isolate;
+    
+      &::before {
+        position: absolute;
+        z-index: -1;
+        background: rgb(0 0 0 / 55%);
+        content: "";
+        inset: 0;
+      }
+    }
+
+    &__content {
+      margin: auto;
+      padding: 2rem;
+      color: $color-background;
+      max-width: 700px;
+      text-shadow: 0 1px 3px rgb(0 0 0 / 60%);
+
+      h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+
+      .poster__subtitle {
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+      }
+
+      .poster__info {
+        position: absolute;
+        bottom: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        color: $color-background;
+        font-size: 1rem;
+        font-weight: 500;
+        text-shadow: 0 1px 3px rgb(0 0 0 / 60%);
+      }
     }
   }
 }
