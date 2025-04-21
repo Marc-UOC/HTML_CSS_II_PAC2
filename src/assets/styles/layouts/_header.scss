@@ -2,11 +2,8 @@
   background-color: $color-background;
   border-bottom: 2px solid $color-secondary;
   position: relative;
-
-  .page-article & {
-    border-bottom: none;
-  }
 }
+
 
 .site-header__logo-img {
   width: auto;
@@ -45,10 +42,12 @@
     position: absolute;
     top: 100%;
     left: 0;
+    z-index: 9999;
     width: 100%;
     padding: 1rem 0;
     background-color: $color-secondary;
     border-top: 1px solid $color-primary;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
     &.is-open {
       display: block;
@@ -57,6 +56,9 @@
 
   @media (min-width: $mq-min-tablet) {
     display: block;
+    position: static;
+    background: none;
+    border: none;
   }
 }
 
