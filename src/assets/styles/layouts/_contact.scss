@@ -6,9 +6,10 @@
     container-name: contact;
 
     &__title {
-      font-size: 2rem;
+      font-size: 1.5lh;
       font-weight: 700;
       color: $color-primary;
+     
     }
 
     &__subtitle {
@@ -22,6 +23,7 @@
       color: $color-text-secondary;
       max-width: 700px;
       margin-inline: auto;
+      
     }
 
     &__form {
@@ -29,8 +31,6 @@
       max-width: 540px;
       margin-inline: auto;
       padding: 2rem;
-      background-color: $color-background;
-      border: 1px solid $color-secondary;
       border-radius: 0.75rem;
       container-type: inline-size;
 
